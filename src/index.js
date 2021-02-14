@@ -1,21 +1,22 @@
 import Phaser from 'phaser';
 import logoImg from './assets/logo.png';
+import {Die} from "./die";
 
-class MyGame extends Phaser.Scene
-{
-    constructor ()
-    {
+class MyGame extends Phaser.Scene {
+    constructor () {
         super();
     }
 
     preload ()
     {
         this.load.image('logo', logoImg);
+        const die = new Die();
+        const dieValue = die.roll();
     }
       
     create ()
     {
-        const logo = this.add.image(400, 150, 'logo');
+        const logo = this.add.image(600, 150, 'logo');
       
         this.tweens.add({
             targets: logo,
