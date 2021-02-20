@@ -3,7 +3,7 @@ export class Die {
     }
 
     roll() {
-        var dievalue = 1 + Math.floor(Math.random() * 6);
+        var dievalue = Math.floor(Math.random() * 6);
         return dievalue;
     }
 
